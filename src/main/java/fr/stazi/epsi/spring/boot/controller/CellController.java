@@ -46,6 +46,7 @@ public class CellController {
 		
 		throw new AlreadyExistsException();
 	}
+	
 	@PreAuthorize("@securityMethodService.canManage(#id, principal)")
 	@PutMapping("/{id}")
 	public Cell update(@PathVariable Long id, @RequestBody Cell entity) {
