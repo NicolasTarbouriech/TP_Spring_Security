@@ -26,9 +26,10 @@ public class CellController {
 
 	private CellService cellService;
 
-	public CellController(CellService cellService) {
+	public CellController(CellService cellService, CellRepository cellRepo) {
 		super();
 		this.cellService = cellService;
+		this.cellRepo = cellRepo;
 	}
 	
 	@GetMapping
